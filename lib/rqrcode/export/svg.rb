@@ -51,8 +51,8 @@ module RQRCode
         @qrcode.modules.each_index do |c|
           tmp = []
           @qrcode.modules.each_index do |r|
-            y = c*module_size + offset
-            x = r*module_size + offset
+            y = c * module_size + offset
+            x = r * module_size + offset
             next unless @qrcode.checked?(c, r)
             tmp << %{<rect width="#{module_size}" height="#{module_size}" x="#{x}" y="#{y}" style="fill:##{color}"/>}
           end
